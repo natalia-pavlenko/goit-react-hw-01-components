@@ -9,18 +9,13 @@ export const FriendOnline = styled.span`
 width: 20px;
 height: 20px;
 border-radius: 50%;
-background-color: green;
-`;
-export const FriendOffline = styled.span`
-width: 20px;
-height: 20px;
-border-radius: 50%;
-background-color: red;
+background-color: ${props => { 
+  return props.isOnline ? 'red' : 'green'; 
+}};
 `;
 export const FriendListItSpan = styled.span`
 display: flex;
 `;
-
 export const FriendListItp = styled.p`
   font-size: 35px;
   font-weight: 400;
